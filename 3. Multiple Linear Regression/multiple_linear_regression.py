@@ -52,21 +52,21 @@ import statsmodels.api as sm
 X = np.append(arr=np.ones((50, 1)).astype(int), values=X, axis=1)
 
 X_opt = X[:, [0, 1, 2, 3, 4, 5]]
-regressor_OLS = sm.OLS(endog = y, exog = X_opt).fit()
+regressor_OLS = sm.OLS(endog=y, exog=X_opt).fit()
 print(regressor_OLS.summary())
 
 X_opt1 = X[:, [0, 1, 3, 4, 5]]
-regressor_OLS1 = sm.OLS(endog = y, exog = X_opt1).fit()
+regressor_OLS1 = sm.OLS(endog=y, exog=X_opt1).fit()
 print(regressor_OLS1.summary())
 
 X_opt2 = X[:, [0, 3, 4, 5]]
-regressor_OLS2 = sm.OLS(endog = y, exog = X_opt2).fit()
+regressor_OLS2 = sm.OLS(endog=y, exog=X_opt2).fit()
 print(regressor_OLS2.summary())
 
 X_opt3 = X[:, [0, 3, 5]]
-regressor_OLS3 = sm.OLS(endog = y, exog = X_opt3).fit()
+regressor_OLS3 = sm.OLS(endog=y, exog=X_opt3).fit()
 print(regressor_OLS3.summary())
 
 X_opt4 = X[:, [0, 3]]
-regressor_OLS4 = sm.OLS(endog = y, exog = X_opt4).fit()
+regressor_OLS4 = sm.OLS(endog=y, exog=X_opt4).fit()
 print(regressor_OLS4.summary())

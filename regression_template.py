@@ -26,6 +26,7 @@ y_train = sc_y.fit_transform(y_train)"""
 # Create your regressor here
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
+regressor.fit(X,y)
 
 # Predicting a new result
 y_pred = regressor.predict(np.array([[6.5]]))

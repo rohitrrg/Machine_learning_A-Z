@@ -24,10 +24,10 @@ from sklearn.compose import ColumnTransformer
 labelencoder_X = LabelEncoder()
 X[:, 0] = labelencoder_X.fit_transform(X[:, 0])
 transformer = ColumnTransformer([('one_hot_encoder', OneHotEncoder(), [0])], remainder='passthrough')
-X = np.array(transformer.fit_transform(X), dtype=np.float)
+X = np.array(transformer.fit_transform(X), dtype=float)
 
 # Encoding the Dependent Variable
 labelencoder_y = LabelEncoder()
 Y = labelencoder_y.fit_transform(y)
+
 print(X)
-print('')
